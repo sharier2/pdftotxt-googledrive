@@ -46,7 +46,7 @@ def download_file_from_drive(service, file_id, file_path):
     file_contents = io.BytesIO(request.execute())
 
     # Write the PDF file contents to a file
-    with open('./{}'.format("../" + file_path), 'wb') as f:
+    with open('./{}'.format("./" + file_path), 'wb') as f:
         shutil.copyfileobj(file_contents, f)
 
 def get_files_from_drive_folder(folder_id, service):
